@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"main.jp.ac.uryukyu.ie.e195735"},{"l":"すべてのパッケージ","u":"allpackages-index.html"}];updateSearchResults();

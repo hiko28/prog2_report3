@@ -44,14 +44,18 @@ public class Hero {
      * 指定されたダメージを hitPoint から引き、死亡判定を行う。
      * @param damage 受けたダメージ
      */
-    public void wounded(int damage){
+    public void wounded(int damage) {
         hitPoint -= damage;
-        if( hitPoint < 0 ) {
+        if (hitPoint < 0) {
             dead = true;
             System.out.printf("勇者%sは道半ばで力尽きてしまった。\n", name);
         }
     }
-
+    /**
+     * getName
+     * nameのgetterメソッド
+     * @return name
+     */
     public String getName() {
         return name;
     }

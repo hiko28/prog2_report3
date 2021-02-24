@@ -26,7 +26,7 @@ public class Hero extends LivingThing{
     }
 
     @Override
-    public void wounded(int damage) {
+    public void wounded(double damage) {
         hp -= damage;
         if (hp < 0) {
             setDead(true);

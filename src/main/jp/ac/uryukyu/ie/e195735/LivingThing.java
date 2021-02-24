@@ -35,12 +35,20 @@ public class LivingThing {
         }
     }
 
+    public void attackWithWeponSkill(LivingThing opponent) {
+        if(dead == false) {
+            double damage = attack * 1.5;
+            System.out.printf("%sの攻撃！ウェポンスキルを発動！%sに%fのダメージを与えた！！\n", name, opponent.getName(), damage);
+            opponent.wounded(damage);
+        }
+    }
+
     /**
      * 自身へ攻撃されたときのダメージ処理をするメソッド。
      * 指定されたダメージを hitPoint から引き、死亡判定を行う。
      * @param damage 受けたダメージ
      */
-    public void wounded(int damage){
+    public void wounded(double damage){
         hitPoint -= damage;
         if( hitPoint < 0 ) {
             dead = true;
